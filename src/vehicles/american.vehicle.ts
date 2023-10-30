@@ -107,7 +107,7 @@ export default class AmericanVehicle extends Vehicle {
         duration: 10,
         temperature: 70,
         defrost: false,
-        heatedFeatures: false,
+        heatedFeatures: 0,
         unit: 'F',
       } as VehicleStartOptions,
       ...startConfig,
@@ -122,7 +122,7 @@ export default class AmericanVehicle extends Vehicle {
         'value': `${mergedConfig.temperature}`,
       },
       'defrost': mergedConfig.defrost,
-      'heating1': +mergedConfig.heatedFeatures, // use the unary method to convert to int
+      'heating1': mergedConfig.heatedFeatures,
       'seatHeaterVentInfo': null, // need to figure out what this is
     };
 
